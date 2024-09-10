@@ -1,0 +1,179 @@
+/* القاعدة العامة */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+
+/* تنسيق الـ Navbar */
+.navbar {
+    background-color: #004080;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* السماح بالتفاف العناصر في حال كانت الشاشة ضيقة */
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #003366;
+    border-radius: 5px;
+}
+
+/* تنسيق الشعار (logo) */
+.logo-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+/* تنسيق الجدول */
+.course-schedule {
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.course-table th,
+.course-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.course-table th {
+    background-color: #004080;
+    color: white;
+}
+
+.course-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.course-table tr:hover {
+    background-color: #e9f4ff;
+}
+
+/* تنسيق الفوتر */
+.footer {
+    background-color: #004080;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* السماح بالتفاف العناصر عند الحاجة */
+}
+
+.footer-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.footer-item {
+    display: inline-block;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.footer-link:hover {
+    background-color: #003366;
+    border-radius: 5px;
+}
+
+.footer-img {
+    width: 50px;
+    height: auto;
+}
+
+/* استعلامات الإعلام للتجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+    /* للهواتف */
+    .navbar {
+        flex-direction: column; /* ترتيب العناصر عمودياً على الشاشات الصغيرة */
+        align-items: flex-start;
+    }
+
+    .nav-list {
+        flex-direction: column; /* جعل القائمة عمودية */
+        gap: 10px;
+        width: 100%; /* لجعل القائمة تمتد عبر العرض بالكامل */
+    }
+
+    .nav-item {
+        width: 100%; /* كل عنصر يأخذ العرض الكامل */
+    }
+
+    .nav-link {
+        font-size: 14px; /* تقليل حجم النص قليلاً */
+        padding: 10px;
+        text-align: center; /* جعل النص في المنتصف */
+    }
+
+    .logo {
+        margin-bottom: 15px; /* إضافة مسافة تحت الشعار */
+    }
+
+    /* الفوتر أيضًا يتغير ترتيبه */
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-list {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%; /* جعل القائمة تمتد بالكامل */
+    }
+
+    .footer-item {
+        width: 100%; /* جعل العناصر تمتد عبر العرض بالكامل */
+    }
+
+    .footer-link {
+        font-size: 14px; /* تقليل حجم النص */
+        text-align: center; /* جعل النص في المنتصف */
+    }
+}
